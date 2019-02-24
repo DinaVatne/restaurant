@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <meta name="description" content="dina's portfolio">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <title>Grid</title>
+</head>
+
+<body>
+
+    <div class="grid-container">
+
+        <header>
+            <div class="logo"></div>
+            <p class="headline">RESTAURANT OG BAR</p>
+        </header>
+
+        <div class="border-chili"></div>
+
+        <main>
+            <img src="forside2.jpg" alt="mat">
+            <button>
+                <a class="menu_button" href="menu.html">MENU</a>
+            </button>
+        </main>
+
+        <div class="border-taco"></div>
+
+        <article>
+            <div class="chili-blue">
+                <div class="chili"></div>
+                <div class="chili"></div>
+                <div class="chili"></div>
+            </div>
+            <div class="info">
+                <p class="åpningstider">
+                    ÅPNINGSTIDER: <br />
+                    Mon-Thur 13.00-01.00 <br />
+                    Fri and Sun 12.00-02-00 <br />
+                    Sun 12-00-23.00
+                </p>
+                <p class="adresse">
+                    ADRESSE: <br />
+                    Sorrentovej 22, 2300<br />
+                    København S
+                </p>
+                <p class="contact">
+                    KONTAKT:<br />
+                    contact@hotstuff.com<br />
+                    +45 236 34 093
+                </p>
+
+            </div>
+        </article>
+
+        <section>
+            <p class="about">
+                Opplev spicy mat og vågale drinker! Det er som oftest bord til alle, men vi anbefaler å bestille bord i weekenden. Det kan gjøres via mail eller telefon, eller ved å besøke våres Facebook-side. Velkommen!
+            </p>
+            <div class="chili-pink"></div>
+        </section>
+
+        <div class="border-taco2"></div>
+
+    </div>
+
+    <footer>
+        2019<br />
+        Sorrentovej 22, 2300 København<br />
+        contact@hotstuff.com
+    </footer>
+
+</body>
+
+<style>
+    body {
+        background-color: #9ED7E5;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .grid-container {
+        background-color: #fff;
+        padding: 4vw 0;
+
+    }
+
+    .logo {
+        width: 90%;
+        height: 14.6vw;
+        margin: auto;
+        background-image: url(SVG/logo.svg);
+
+    }
+
+    .headline {
+        font-size: 7vw;
+        color: #9ED7E5;
+        text-align: center;
+        margin: 0vw 0vw 2vw;
+    }
+
+    .border-chili {
+        width: 100%;
+        height: 6.2vw;
+        background-image: url(SVG/border_cl.svg);
+        overflow: hidden;
+    }
+
+    main {
+        width: 100%;
+        height: 40vw;
+        margin: 3vw auto;
+
+        position: relative;
+        overflow: hidden;
+    }
+
+    img {
+        width: 100%;
+        position: absolute;
+    }
+
+    .menu_button {
+        position: absolute;
+        margin: 8vw 20vw;
+        border: 1vw solid #9ED7E5;
+        padding: 0 8vw;
+        font-size: 12vw;
+        color: #E80A54;
+        font-weight: bold;
+        background-color: rgb(255, 255, 255, 0.9);
+        text-decoration: none;
+    }
+
+    .border-taco {
+        width: 100%;
+        height: 6.4vw;
+        background-image: url(SVG/border_tr.svg);
+        overflow: hidden;
+    }
+
+    article {
+        width: 84%;
+        margin: 2vw auto;
+        margin-top: 2vw;
+        border: 1.5vw solid #EFC100;
+        border-radius: 2vw;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+            "chili-blue info"
+    }
+
+
+    .info {
+        grid-area: info;
+        font-size: 4.5vw;
+        margin-top: 3vw;
+        color: #E6007E;
+    }
+
+
+    .chili-blue {
+        width: 20%;
+        margin: 4vw;
+    }
+
+    .chili {
+        background-image: url(SVG/chili_blue.svg);
+        background-repeat: no-repeat;
+        width: 16vw;
+        height: 18vw;
+        margin-top: 5vw;
+    }
+
+    section {
+        width: 88%;
+        margin: auto;
+        padding: 1vw;
+
+    }
+
+    .about {
+        color: #fff;
+        font-size: 5vw;
+        padding: 5vw;
+        background-color: #9ED7E5;
+        border: 1vw solid #EFC100;
+        border-radius: 2vw;
+    }
+
+    .chili-pink {
+        height: 28vw;
+        background-image: url(SVG/chili_pink.svg);
+        background-repeat: no-repeat;
+    }
+
+    .border-taco2 {
+        width: 100%;
+        height: 6.5vw;
+        background-image: url(SVG/border_tl.svg);
+        overflow: hidden;
+    }
+
+    footer {
+        text-align: center;
+        color: #fff;
+        font-size: 2.6vw;
+        padding: 4vw;
+    }
+
+
+
+
+    @media all and (min-width: 768px) {
+
+        .grid-container {
+            margin: -1vw 5vw;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 22vw 3vw 34vw 6vw 49vw 4vw;
+            grid-template-areas:
+                "header header header"
+                "border-chili border-chili border-chili"
+                "main main main"
+                "border-taco border-taco border-taco"
+                "article article section"
+                "border-taco2 border-taco2 border-taco2"
+        }
+
+        header {
+            grid-area: header;
+        }
+
+
+        .headline {
+            font-size: 4vw;
+        }
+
+        .border-chili {
+            grid-area: border-chili;
+        }
+
+        main {
+            grid-area: main;
+            height: 30vw;
+        }
+
+        .menu_button {
+            margin: 8vw 21.5vw;
+            font-size: 8vw;
+        }
+
+        .border-taco {
+            grid-area: border-taco;
+            background-repeat: no-repeat;
+        }
+
+        article {
+            grid-area: article;
+            width: 80%;
+            border: 0.6vw solid #EFC100;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-areas:
+                "chili-blue info info info"
+        }
+
+        .chili-blue {
+            grid-area: chili-blue;
+            margin: 9vw 8vw;
+        }
+
+
+        .chili {
+            width: 10vw;
+            margin: -5vw
+        }
+
+
+        .info {
+            grid-area: info;
+            font-size: 2.3vw;
+        }
+
+        section {
+            grid-area: section;
+            width: 100%;
+            margin-left: -4vw;
+            margin-top: -1vw;
+        }
+
+        .about {
+            font-size: 2.1vw;
+            border: 0.4vw solid #EFC100;
+            padding: 2vw 2vw;
+        }
+
+        .chili-pink {
+            margin-top: 3vw;
+            width: 30vw;
+            height: ;
+        }
+
+        .border-taco2 {
+            grid-area: border-taco2;
+            background-repeat: no-repeat;
+        }
+
+
+    }
+</style>    
+    
+</html>

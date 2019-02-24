@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <meta name="description" content="dina's portfolio">
+    <link href="http://fonts.googleapis.com/css?family=Pontano+Sans" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Cantata+One" rel="stylesheet">
+    <link rel="stylesheet">
+    <title>Grid</title>
+</head>
+    
+<body>
+    
+    <div class="grid-container">
+        
+        <header></header> 
+        
+        <div class="border-chili"></div>
+        
+        <main>
+            <button>Meny </button>
+        </main>
+        
+        <article>
+            <div class="chili-blue"></div>
+            <p class="info"></p>
+        </article>
+        
+        <section>
+            <div class="chili-pink"></div>
+            <p class="about"></p>
+        </section>
+        
+        <footer>
+        </footer>
+        
+    </div>
+    
+    <footer></footer>
+    
+    
+    
+</body>
+    
+<style>
+    
+    /*// STYLING //*/
+    
+    body {
+        background-color: #9ED7E5;
+        display: inline-block;
+    }
+    
+    .grid-container {
+        margin: auto;
+        background-color: #fff;
+        height: 250vh;
+        width: 600px;
+    }
+    
+    header {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2vh;
+        width: 80%;
+        height: 200px;
+        background-color:  blueviolet;
+    }
+    
+    main {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        width: 97%;
+        height: 300px;
+        background-color: cadetblue;
+    }
+    
+   article {
+        margin: auto;
+        width: 90%;
+        height: 35px;
+        background-color: cadetblue;
+    }
+    
+    .chili-blue {
+        width: 3px;
+        height: 7px;
+        background-color: antiquewhite;
+    }
+    
+    .info {
+        width: 70%;
+        height: 70%;
+        background-color: antiquewhite;
+    }
+    
+    section {
+        margin: auto;
+        width: 90%;
+        height: 350px;
+        background-color: cadetblue;
+    }
+    
+    .border-chili {
+        width: 100%;
+        height: 20px;
+        background-color: aqua;
+    }
+    
+    
+     /*// GRID 
+   
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "header header"
+            "main main"
+            "article section"
+    }
+    
+    header {
+        grid-area: header;
+    }
+    
+    main {
+       grid-area: main;
+    }
+    
+   article {
+        grid-area: article;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "chili-blue info"
+    }
+    
+    .chili-blue {
+        grid-area: chili-blue;
+    }
+    
+    .info {
+        grid-area: info;
+    }
+    
+    .about {
+        width: 90%;
+        height: 40%;
+        background-color: antiquewhite;
+    }
+    
+    .chili-pink{
+        width: 90%;
+        height: 40%;
+        background-color: antiquewhite;
+    }
+    
+    //*/
+   
+    
+</style>    
+    
+</html>

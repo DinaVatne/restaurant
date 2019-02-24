@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        background-color: #9ED7E5;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .grid-container {
+        background-color: #fff;
+        padding: 4vw 0;
+    }
+
+    .logo {
+        width: 90%;
+        height: 14.6vw;
+        margin: auto;
+        background-image: url(SVG/logo.svg);
+         background-repeat: no-repeat;
+
+    }
+
+    .headline {
+        font-size: 7vw;
+        color: #9ED7E5;
+        text-align: center;
+        margin: 0vw 0vw 2vw;
+    }
+
+    .hjem_button {
+        border-style: none;
+    }
+
+    .hjem {
+        text-decoration: none;
+        font-size: 5vw;
+        font-weight: bold;
+        color: #E80A54;
+        letter-spacing: 0.2rem;
+        margin-left: 37.5vw;
+    }
+
+    .menu_box {
+        width: 80%;
+        overflow: hidden;
+        height: 59vw;
+        background-image: url(SVG/meny.svg);
+        margin: auto;
+    }
+
+    .menu {
+        text-align: center;
+
+
+    }
+
+    .filter {
+        color: #9ED7E5;
+        font-weight: bold;
+        border-style: none;
+        font-size: 3vw;
+        margin: 3vw 0vw;
+    }
+
+    .navn_rett {
+        text-align: center;
+        text-transform: uppercase;
+        color: #6ABE84;
+        letter-spacing: 0.3rem;
+    }
+
+    #navn {
+        font-size: 5.1vw;
+        color: #E80A54;
+        letter-spacing: 0.2rem;
+        margin: 1.1vw;
+    }
+
+    .pris {
+        font-size: 1.3rem;
+        color: #E80A54;
+        margin: 2vw;
+    }
+
+    .style {
+        background-color: #fff;
+        font-weight: bold;
+        border: 1.2vw solid #EFC100;
+        border-radius: 2vw;
+        margin: 2vw auto;
+        text-align: center;
+        width: 80%;
+         overflow: hidden;
+    }
+
+    .img-container {
+        background-color: antiquewhite;
+        height: 40vw;
+        overflow: hidden;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .kategori {
+        display: none;
+    }
+    
+    .border-chili {
+        width: 100%;
+        height: 5.6vw;
+        background-image: url(SVG/border_cl.svg);
+        overflow: hidden;
+    }
+
+    footer {
+        text-align: center;
+        color: #fff;
+        font-size: 2.6vw;
+        letter-spacing: 0.1rem;
+        padding: 5vw;
+    }
+
+    #popup {
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        background-color: hsla(0, 15%, 48%, 0.5);
+        display: none;
+    }
+
+    #luk {
+        position: fixed;
+        right: 3vw;
+        top: 3vw;
+    }
+
+    #indhold {
+        width: 80vw;
+        margin: 4rem auto;
+        color: #E80A54;
+        letter-spacing: 0.2rem;
+    }
+
+    #luk button {
+        font-size: 1.5rem;
+        padding: 1vw 2.5vw;
+        background-color: #fff;
+        border-radius: 6vw;
+        color: #E80A54;
+    }
+
+
+    @media only screen and (min-width: 768px) {
+
+        .headline {
+            font-size: 4vw;
+        }
+        
+        .hjem {
+            font-size: 3.7vw;
+            margin: 40vw;
+        }
+        
+         .menu_box {
+        width: 65%;
+           height: 46vw;
+        background-image: url(SVG/meny.svg);
+        margin: auto;
+    }
+        
+        #liste {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .img-container {
+            height: 20vw;
+        }
+        
+        #navn {
+        font-size: 3vw;
+    }
+
+    .style {
+        border: 0.8vw solid #EFC100;
+        margin: 2vw auto;
+        text-align: center;
+        width: 90%;
+    }
+        
+        
+
+
+    }
+
+    @media only screen and (min-width: 900px) {
+        
+        .grid-container {
+            margin: 0 8vw;
+            overflow: hidden;
+        }
+        
+        .headline {
+            font-size: 3vw;
+            margin-top: -2vw;
+        }
+        
+        .hjem {
+            font-size: 2vw;
+            margin-left: 35vw;
+        }
+        
+        .menu_box {
+            height: 40vw;
+        }
+        
+        .filter {
+            font-size: 2.6vw;
+            margin: 1vw;
+        }
+
+       
+        #liste {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        
+        .style {
+            border: 0.5vw solid #EFC100;
+           
+        }
+
+        .img-container {
+            height: 15vw;
+        }
+        
+        #navn {
+            font-size: 2vw;
+        }
+    }
+
+    
+     @media only screen and (min-width: 1300px) {
+
+        .grid-container {
+            margin: 0vw 10vw;
+        }
+        
+    }
+    
+</style>
+
+
+<body>
+    <div class="grid-container">
+        <header>
+            <div class="logo"></div>
+            <p class="headline">RESTAURANT OG BAR</p>
+        </header>
+
+        <button class="hjem_button">
+            <a class="hjem" href="grid.html">HJEM</a>
+        </button>
+
+        <div class="menu_box"></div>
+
+        <div class="menu">
+            <button class="filter valgt" data-kategori="alle">ALLE</button>
+            <button class="filter" data-kategori="Tacos">TACOS</button>
+            <button class="filter" data-kategori="Gelado">GELADO</button>
+            <button class="filter" data-kategori="Tilbehør">TILBEHØR</button>
+            <button class="filter" data-kategori="Cocktails">COCKTAILS</button>
+        </div>
+        <h2 class="navn_rett">Alle</h2>
+
+        <div id="liste">
+        </div>
+        
+        <div class="border-chili"></div>
+
+    </div>
+
+    <footer>
+        2019<br />
+        Sorrentovej 22, 2300 København<br/>
+        contact@hotstuff.com
+    </footer>
+
+    <div id="popup">
+        <div id="luk">
+            <button> X </button>
+        </div>
+        <div id="indhold"></div>
+    </div>
+
+
+    <script>
+        let alleReter = [];
+        let filter = "alle";
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            hentJson();
+            
+            async function hentJson() {
+            let jsonData = await fetch("https://mandalskeawebspace.dk/claude_php/clean_up_spreadsheet.php?id=1KdvXLdVTJPB0ToV50TZ5kzhZnCwCEhr-Ktla5L7E5ac");
+            console.log(jsonData);
+            alleDyr =  await jsonData.json();
+            console.log(alleDyr);
+            visDyr();
+        }
+
+            async function hentJson() {
+                let jsonData = await fetch("retter.json");
+                alleReter = await jsonData.json();
+                visRet();
+            }
+
+            function visRet() {
+                let destination = document.querySelector("#liste");
+                destination.innerHTML = "";
+                alleReter.forEach(ret => {
+                    if (filter == "alle" || filter == ret.kategori) {
+                        let template = `
+                        <div class="style">
+                            <div class="img-container">
+                                <img src = bilder_meny/${ret.billede}.jpg>
+                            </div>
+                            <h3 id="navn">${ret.navn}</h3>
+                            <p class="pris"> ${ret.pris}</p>
+                            <p class="kategori">Kategori: ${ret.kategori}</p>
+                        </div>`;
+
+                        destination.insertAdjacentHTML("beforeend", template);
+
+                        destination.lastElementChild.addEventListener("click", () => {
+                            visSingle(ret);
+                        });
+
+                        function visSingle() {
+                            document.querySelector("#indhold").innerHTML = `
+                            <div class="style">
+                                <h3 id="navn">${ret.navn}</h3>
+                            <div class="img-container">
+                                <img src = bilder_meny/${ret.billede}.jpg>
+                            </div>
+                            <p>${ret.lang}</p>
+                            <p class="pris">Pris: ${ret.pris}</p>
+                            <p>Kategori: ${ret.kategori}</p>
+                            </div>`;
+
+
+
+                            document.querySelector("#popup").style.display = "block";
+                            document.querySelector("#popup #luk").addEventListener("click", close);
+                        }
+
+                        function close() {
+                            document.querySelector("#popup").style.display = "none";
+
+                        }
+
+                    }
+                });
+
+
+            }
+            document.querySelectorAll(".filter").forEach(but => {
+                but.addEventListener("click", filtrering);
+            });
+
+            function filtrering() {
+                document.querySelectorAll(".filter").forEach(but => {
+                    but.classList.remove("valgt");
+                })
+                this.classList.add("valgt");
+                document.querySelector("h2").textContent = this.textContent;
+                filter = this.getAttribute("data-kategori");
+                visRet();
+            }
+        }
+    </script>
+</body>
+
+</html>
+
